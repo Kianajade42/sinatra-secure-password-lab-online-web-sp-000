@@ -24,8 +24,8 @@ class ApplicationController < Sinatra::Base
         User.create(username: params[:username], password: params[:password])
         redirect '/login'
       end
-
     end
+    
   get '/account' do
     @user = User.find(session[:user_id])
     erb :account
@@ -65,3 +65,4 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
   end
+end
