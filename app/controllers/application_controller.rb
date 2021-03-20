@@ -51,7 +51,7 @@ class ApplicationController < Sinatra::Base
 		redirect "/failure"
 	end
 end
-  
+
 
   get "/failure" do
     erb :failure
@@ -71,4 +71,3 @@ end
       User.find(session[:user_id])
     end
   end
-
