@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
     		if user.save
     			redirect "/login"
     		else
-    		redirect "/failure"
+    		redirect "/failure.erb"
     	end
   end
 
